@@ -31,7 +31,7 @@ service 'transmission' do
 end
 
 file '/etc/transmission-daemon/settings.json' do
-  content JSON.generate(node[:transmission][:settings], indent: '    ', space: ' ', object_nl: "\n").gsub(/,$/, ', ')
+  content JSON.generate(node[:transmission][:settings], indent: '    ', space: ' ', object_nl: "\n").gsub(/,$/, ',')
   owner node[:transmission][:user]
   group node[:transmission][:group]
   mode 0600
