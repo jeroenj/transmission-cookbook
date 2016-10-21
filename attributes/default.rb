@@ -1,3 +1,5 @@
+default[:transmission][:apt][:uri] = 'ppa:transmissionbt/ppa'
+
 default[:transmission][:user] = 'debian-transmission'
 default[:transmission][:group] = 'debian-transmission'
 default[:transmission][:config_dir] = '/var/lib/transmission-daemon/info'

@@ -1,6 +1,8 @@
-%w[transmission transmission-cli transmission-daemon].each do |pkg|
-  package pkg
+apt_repository 'transmission' do
+  uri node[:transmission][:apt][:uri]
 end
+
+package 'transmission'
 
 template '/etc/default/transmission-daemon' do
   source 'transmission-daemon.default.erb'
